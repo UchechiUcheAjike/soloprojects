@@ -1,4 +1,4 @@
-# game over implementation
+""" game over implementation """
 
 import random
 from game import constants
@@ -16,7 +16,7 @@ from game.score import Score
 
 def main(screen):
 
-    # creates the cast {key: tag, value: list}
+    """ creates the cast {key: tag, value: list} """
     cast = {}
 
     x = int(constants.MAX_X / 2)
@@ -49,7 +49,7 @@ def main(screen):
     score = Score()
     cast["score"] = [score]
     
-    # creates the script {key: tag, value: list}
+    """ creates the script {key: tag, value: list} """
     script = {}
 
     input_service = InputService(screen)
@@ -64,7 +64,7 @@ def main(screen):
     script["output"] = [draw_actors_action]
 
 
-    # starts the game
+    """ starts the game """
     director = Director(cast, script)
     director.start_game()
 
